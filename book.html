@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Watercoapp</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#">Book Library</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="./book.html" aria-current="page">Books</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./borrow.html">Borrow</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./member.html">Member</a>
+              </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+            <div class="row">
+                <div class="form-box">
+                    <h2 class="form-header text-center">Add a book</h2>
+                    <form onsubmit="event.preventDefault(); onBookFormSubmit();">
+                        <div class="row mb-3">
+                        <label for="title" class="col-form-label">Title:</label>
+                        <div>
+                            <input type="text" class="form-control" name="title" id="title" required>
+                        </div>
+                        </div>
+                        <div class="row mb-3">
+                        <label for="author" class="col-form-label">Author:</label>
+                        <div>
+                            <input type="text" class="form-control" name="author" id="author" required>
+                        </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="isbn" class="col-form-label">ISBN:</label>
+                            <div>
+                            <input type="text" class="form-control" name="isbn" id="isbn" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="copies" class="col-form-label">Copies:</label>
+                            <div>
+                            <input type="number" class="form-control" name="copies" id="copies" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="genre" class="col-form-label">Genre:</label>
+                            <div>
+                            <input type="text" class="form-control" name="genre" id="genre" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="pdate" class="col-form-label">Publication date:</label>
+                            <div>
+                            <input type="date" class="form-control" name="pdate" id="pdate" required>
+                            </div>
+                        </div>
+                       
+
+                        <button type="submit" class="btn btn-outline-primary mx-auto out-btn">Submit</button>
+                    </form>
+                </div>
+
+                <div class="elem">
+                    <h2 class="elem-title">All Books</h2>
+                    <div class="row g-4 add-form">
+                        <div class="col-md-4">
+                          <input type="number" class="form-control" placeholder="Book ID" aria-label="Book ID"  name="Bookid" id="Bookid">
+                        </div>
+                        <div class="col">
+                            <button type="submit" onclick="event.preventDefault(); onBookIdInput();" class="btn btn-outline-primary">View One</button>
+                        </div>
+                      </div>
+                    <table class="table" id="allbooks">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="align-middle">Book ID</th>
+                          <th scope="col" class="align-middle">Title</th>
+                          <th scope="col" class="align-middle">Author</th>
+                          <th scope="col" class="align-middle">ISBN</th>
+                          <th scope="col" class="align-middle">Copies</th>
+                          <th scope="col" class="align-middle">Genre</th>
+                          <th scope="col" class="align-middle">Publication Date</th>
+                          <th scope="col" class="align-middle">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="tbody">
+
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+      </div>
+
+<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+
+</html>
